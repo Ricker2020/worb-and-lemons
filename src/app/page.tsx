@@ -1,7 +1,20 @@
+"use client";
 import Image from "next/image";
 import styles from "./style.module.css";
+import { useEffect, useRef } from 'react';
+import { setupAnimation } from "./animation.js";
 
 export default function Home() {
+    const mainRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        const cleanup = setupAnimation(); // Setup the animation and get the cleanup function
+
+        return () => {
+        cleanup?.(); // Cleanup on component unmount
+        };
+    }, []); // Run only once when the component is mounted
+
   return (
     <main className={styles.main}>
         <script src="./animation.js" />
