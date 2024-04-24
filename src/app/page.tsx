@@ -6,7 +6,6 @@ import { setupAnimation } from "./animation.js";
 
 export default function Home() {
     const mainRef = useRef<HTMLDivElement>(null);
-
     useEffect(() => {
         const cleanup = setupAnimation(); // Setup the animation and get the cleanup function
 
@@ -17,8 +16,6 @@ export default function Home() {
 
   return (
     <main className={styles.main}>
-        <script src="./animation.js" />
-        
         <div className={styles.container}>
             <div className={styles.topSection}>
                 <h1 className={styles.tittle}>WORB & LEMONS</h1>
@@ -98,6 +95,9 @@ export default function Home() {
             </div>
         </div>
       </div>
+      <script src="./animation.js" />
     </main>
   );
+
+  
 }
