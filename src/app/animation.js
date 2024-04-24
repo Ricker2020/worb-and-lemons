@@ -3,7 +3,7 @@ function qs(selector, all = false) {
 }
 
 export function setupAnimation() {
-    const sections = document.querySelector('.section', true);
+    const sections = document.querySelectorAll('.section', true);
     const timeline = document.querySelector('.timeline');
     const line = document.querySelector('.line');
     line.style.bottom = `calc(100% - 20px)`;
